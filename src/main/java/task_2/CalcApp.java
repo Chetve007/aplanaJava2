@@ -23,6 +23,7 @@ public class CalcApp {
         double res = mathOperation(first, operator, second);
 
         formattedDisplay(res, 4);
+        scanner.close();
     }
 
     /**

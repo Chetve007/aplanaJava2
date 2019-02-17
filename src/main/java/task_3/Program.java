@@ -47,6 +47,7 @@ public class Program {
                 throw new RuntimeException("Not supported operation");
         }
         System.out.printf("Result is %.4f", result);
+        scanner.close();
     }
 
     public static void stringsArray() {
@@ -64,5 +65,6 @@ public class Program {
                 max = arrayStr[i];
         }
         System.err.printf("The longest word in the array is '%s'", max);
+        scanner.close();
     }
 }
