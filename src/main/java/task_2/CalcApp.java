@@ -26,13 +26,16 @@ public class CalcApp {
     }
 
     /**
-     *
      * @param x is first decimal number
      * @param operator support only '+', '-', '*', '/'
      * @param y is second decimal number
      * @return the result as a decimal number
      */
     public static double mathOperation(double x, char operator, double y) {
+
+        /* use a switch to
+        verify the entered operator */
+
         switch (operator) {
             case '+':
                 return x + y;
@@ -43,12 +46,11 @@ public class CalcApp {
             case '/':
                 return x / y;
             default:
-                throw new RuntimeException("Not supported operation");
+                throw new RuntimeException("Not supported operation"); // support only + - * /
         }
     }
 
     /**
-     *
      * @param res is a decimal number which should be displayed in formatted form
      * @param decimalPlaces a number of simbols after comma
      */
