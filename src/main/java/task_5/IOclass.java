@@ -35,8 +35,13 @@ public class IOclass {
     }
 
     public void showResult() {
-        double res = calculate();
-        System.out.printf("RESULT: %s %c %s = %.2f\n", a, op, b, res);
+        try {
+            double res = calculate();
+            System.out.printf("RESULT: %s %c %s = %.2f\n", a, op, b, res);
+        } catch (ArithmeticException e) {
+            System.out.println("You cannot divide by 0");
+            e.printStackTrace();
+        }
     }
 
     private double calculate() {
